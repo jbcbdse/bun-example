@@ -1,0 +1,17 @@
+{
+  "name": "bun-example",
+  "dockerComposeFile": [
+    "./docker-compose.yml"
+  ],
+  "service": "dev-container",
+  "remoteUser": "user",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
