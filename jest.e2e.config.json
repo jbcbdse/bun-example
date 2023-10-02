@@ -1,0 +1,12 @@
+{
+  "testMatch": [
+    "<rootDir>/src/**/?(*.)+(e2e).ts"
+  ],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleFileExtensions": [
+    "ts",
+    "js"
+  ]
+}

@@ -1,0 +1,4 @@
+[test]
+
+coverage = true
+preload = ["src/bun-test/setup.ts"]
