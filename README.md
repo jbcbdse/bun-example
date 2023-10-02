@@ -21,6 +21,34 @@ I'll write a blog post about this, but these are my general conclusions:
 * Typings in the IDE are strange and don't always work. I didn't put much effort into this.
 * Runtime is roughly the same as node. I'm not sure if this is true at scale.
 * The benchmarks they advertise on their homepage are comparisons of software like `Bun.serve` vs Node's `http.createServer` - not a comparison of the general Javascript runtimes.
-* For some reason, it runs Typescript faster than compiles JS files.
+* For some reason, it runs Typescript faster than compiled JS files.
 
 I didn't spend a lot of time on this or cleaning it up. This is a single-day time-boxed effort.
+
+## Usage
+
+Run this in a dev container. If you don't know how to do that in local VSCode, the easiest way will be to run this in GitHub CodeSpaces. You will be dropped into a dev container that already has `bun` installed. Node 20 is also installed if you want to run some of the same commands with `node` and compare.
+
+Install dependencies
+
+```
+bun install
+```
+
+Start the app:
+
+```
+bun run start
+```
+
+See how long the encrypter takes to generate 100,000 values:
+
+```
+curl localhost:3000/crypt/100000
+```
+
+Test running that same route hundreds of times in a row or concurrently (while the app is running):
+
+```
+bun run test:e2e
+```
