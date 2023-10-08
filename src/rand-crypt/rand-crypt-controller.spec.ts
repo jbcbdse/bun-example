@@ -29,14 +29,14 @@ describe('RandCryptController', () => {
 
   test('performEncryption should return correct structure', async () => {
     const times = 5;
-    encryptionService.performEncryption.mockResolvedValue([
+    encryptionService.performEncryption.mockReturnValue([
       {
         originalNumber: 123,
         key: Buffer.from('key'),
         encryptedValue: 'encrypted',
       },
       // ... more mock results
-    ]);
+    ] as any);
 
     const result = await randCryptController.performEncryption(times);
 
